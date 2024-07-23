@@ -1,0 +1,35 @@
+@api=http://localhost:3001/api/v1/register
+@apiUser=http://localhost:3001/api/v1/users
+@apiAuth=http://localhost:3001/api/v1/users/auth
+
+
+### Post
+POST {{api}}
+Content-Type: application/json
+
+{
+    "Nombre1": "Amaru",
+    "Nombre2": "Ernesto",
+    "Apellido1": "Estrada",
+    "Apellido2": "Lopez",
+    "Genero": "M",
+    "Users": "amaru@gmail.com",
+    "Contraseña": "amaruernesto"
+}
+
+### getcliente
+GET {{api}}
+Content-Type: application/json
+
+### getUser
+GET {{apiUser}}
+Content-Type: application/json
+
+### authUser
+POST {{apiAuth}}
+Content-Type: application/json
+
+{
+    "Users": "amaru@gmail.com",
+    "Contraseña": "amaruernesto"
+}

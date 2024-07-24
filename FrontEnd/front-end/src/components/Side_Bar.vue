@@ -4,7 +4,7 @@
     tabindex="-1"
     role="dialog"
     style="display: block; background: rgba(0, 0, 0, 0.3)"
-    @click.self="closeSideBar"
+    @click.self="closeSideBar()"
   >
     <div
       class="d-flex flex-column flex-shrink-0 p-3 vh-100 shadow"
@@ -21,7 +21,7 @@
           width="50px"
           class="me-3 shadow-sm rounded-circle"
         />
-        <span class="fs-4">SideBar</span></a
+        <span class="fs-4">E & B</span></a
       >
       <hr />
 
@@ -29,25 +29,25 @@
         <li class="nav-item">
           <a href="#" class="nav-link link-dark">
             <i class="bi bi-house me-2"></i>
-            Option 1
+            Home
           </a>
         </li>
         <li class="nav-item">
           <a href="#" class="nav-link link-dark">
             <i class="bi bi-speedometer2 me-2"></i>
-            Option 2
+            Shop
           </a>
         </li>
         <li class="nav-item">
           <a href="#" class="nav-link link-dark">
             <i class="bi bi-table me-2"></i>
-            Option 3
+            About
           </a>
         </li>
         <li class="nav-item">
           <a href="#" class="nav-link link-dark">
             <i class="bi bi-grid me-2"></i>
-            Option 4
+            Contact
           </a>
         </li>
         <li @click="handleClick" class="nav-item">

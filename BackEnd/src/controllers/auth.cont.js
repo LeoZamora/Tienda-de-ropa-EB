@@ -4,7 +4,7 @@ import { generateJWT } from "../helpers/jwt.js"
 
 export const getUser = async(req, res) => {
     const limit = 10;
-    const page = 3
+    const page = 1;
 
     try {
         const user = await filters.getUsers(limit, page)

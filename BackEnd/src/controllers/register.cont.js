@@ -1,10 +1,15 @@
 import Cliente from '../models/EntityModels/Cliente/ClienteModels.js'
 import { connectionDB } from '../db/connection.js'
+import { filters } from '../helpers/filters.js'
 import bcrypt from 'bcrypt'
 
 export const getCliente = async (req, res) => {
+    const limit = 10;
+    const page = 1;
+    const table = Cliente
+
     try {
-        const result = await Cliente.findAll()
+        const result = await filters.getData(limit, page, table)
 
         res.json({
             ok: true,
@@ -17,8 +22,8 @@ export const getCliente = async (req, res) => {
 }
 
 export const postClienteSql = async (req, res) => {
-    const { Nombre1, Nombre2, Apellido1, Apellido2, Genero, Users, Contraseña } = req.body;
-
+    const { Nombre1, Nombre2, Apellido1, Apellido2, Genero, Fecha_Nac, Users, Contraseña } = req.body;
+    console.log(Fecha_Nac);
     const saltRound = 10;
 
     try {
@@ -32,6 +37,7 @@ export const postClienteSql = async (req, res) => {
             @Apellido1 = '${Apellido1}', 
             @Apellido2 = '${Apellido2}', 
             @Genero = '${Genero}', 
+            @Fecha_Nac = '${Fecha_Nac}',
             @Users = '${Users}', 
             @Contraseña = '${hasPass}'
         `);

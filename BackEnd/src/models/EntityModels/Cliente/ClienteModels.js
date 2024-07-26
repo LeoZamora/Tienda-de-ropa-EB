@@ -40,6 +40,11 @@ const Cliente = connectionDB.define('Clientes',{
         defaultValue: connectionDB.NOW,
         allowNull: false,
         field: "Fecha_registroCliente"
+    },
+    Fecha_Nac: {
+        type: DataTypes.DATE,
+        allowNull: true,
+        field: 'Fecha_Nac'
     }
 },{
     tableName: 'Clientes',

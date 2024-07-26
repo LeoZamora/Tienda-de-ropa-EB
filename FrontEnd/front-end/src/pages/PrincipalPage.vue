@@ -40,7 +40,9 @@ export default {
   name: "Principal_Page",
 
   data() {
-    return {};
+    return {
+      list: []
+    };
   },
 
   components: {
@@ -49,7 +51,8 @@ export default {
     // Footer_Comp,
   },
 
-  methods: {},
+  methods: {
+  },
 
   created() {
     deleteConfigAuth();

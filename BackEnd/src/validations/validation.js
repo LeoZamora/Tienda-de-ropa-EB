@@ -11,19 +11,13 @@ export const postCliente = [
     body('Genero', 'Ingrese un genero valido')
         .exists()
         .isLength({max: 1}),
-    (req, res, next) => {
-        validation(req, res, next);
-    }
-]
-
-export const postUser = [
     body('Users', 'Ingrese un usuario')
         .exists()
         .isEmail()
-        .isLength({min: 8}),
+        .isLength({min: 10}),
     body('Contraseña', 'Ingrese una contraseña')
         .exists()
-        .isLength({min: 5}),
+        .isLength({min: 8}),
     (req, res, next) => {
         validation(req, res, next);
     }
@@ -44,6 +38,5 @@ export const authUser = [
 
 export const validations = {
     postCliente,
-    postUser,
     authUser
 }

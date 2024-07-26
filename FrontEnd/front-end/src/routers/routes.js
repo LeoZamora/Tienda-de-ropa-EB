@@ -1,11 +1,11 @@
 import { createRouter, createWebHistory } from "vue-router";
 import PrincipalPage from "@/pages/PrincipalPage.vue";
 import DashboardPage from "@/pages/DashboardPage.vue"
-import RegisterPage from '@/pages/Registers/RegisterPage.vue'
-import LoginEmpPage from '@/pages/Logins/LoginEmpPage.vue'
-import RegisterGeneralPage from '@/pages/Registers/RegisterGeneralPage.vue'
-import LoginModal from '@/pages/Modals/LoginModal.vue'
-import RegisterCliente from '@/pages/Modals/RegisterCliente.vue'
+import LoginEmpPage from '@/pages/Modals/Logins/LoginEmpPage.vue'
+import RegisterGeneralPage from '@/pages/Modals/Registers/RegisterGeneralPage.vue'
+import LoginModal from '@/pages/Logins/LoginModal.vue'
+import RegisterCliente from '@/pages/Registers/RegisterCliente.vue'
+import AlertConfirm from "@/components/Alerts/AlertConfirm.vue";
 
 function isAuthenticated() {
     return !!localStorage.getItem('token');
@@ -14,6 +14,10 @@ function isAuthenticated() {
 export const routers = new createRouter({
     history: createWebHistory(),
     routes: [{
+        path: '/alertsuccess',
+        name: 'alertsuccess',
+        component: AlertConfirm
+    },{
         path: '/',
         name: 'pagina_principal',
         component: PrincipalPage
@@ -22,10 +26,6 @@ export const routers = new createRouter({
         name: 'dashboard',
         component: DashboardPage,
         meta: {requiresAuth: true}
-    }, {
-        path: '/exotic_boutique/register',
-        name: 'register',
-        component: RegisterPage
     }, {
         path: '/exotic_boutique/services/login_emp',
         name: 'login_emp',

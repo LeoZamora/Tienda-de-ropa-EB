@@ -1,6 +1,8 @@
 @api=http://localhost:3001/api/v1/register
 @apiUser=http://localhost:3001/api/v1/users
 @apiAuth=http://localhost:3001/api/v1/users/auth
+@apiInfo=http://localhost:3001/api/v1/info/options
+@apiInfo2=http://localhost:3001/api/v1/info/name
 
 
 ### Post
@@ -8,13 +10,14 @@ POST {{api}}
 Content-Type: application/json
 
 {
-    "Nombre1": "Amaru",
-    "Nombre2": "Ernesto",
-    "Apellido1": "Estrada",
-    "Apellido2": "Lopez",
-    "Genero": "M",
-    "Users": "amaru@gmail.com",
-    "Contraseña": "amaruernesto"
+    "Nombre1": "Andrea",
+    "Nombre2": "Melissa",
+    "Apellido1": "Orozco",
+    "Apellido2": "Ruiz",
+    "Genero": "F",
+    "Fecha_Nac": "2004-04-12",
+    "Users": "melissaruiz@gmail.com",
+    "Contraseña": "meli2412"
 }
 
 ### getcliente
@@ -23,6 +26,14 @@ Content-Type: application/json
 
 ### getUser
 GET {{apiUser}}
+Content-Type: application/json
+
+### getInfo
+GET {{apiInfo}}
+Content-Type: application/json
+
+### getName
+GET {{apiInfo2}}
 Content-Type: application/json
 
 ### authUser

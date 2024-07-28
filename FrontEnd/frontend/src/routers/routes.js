@@ -3,8 +3,8 @@ import PrincipalPage from "@/pages/PrincipalPage.vue";
 import DashboardPage from "@/pages/DashboardPage.vue"
 import LoginEmpPage from '@/pages/Modals/Logins/LoginEmpPage.vue'
 import RegisterGeneralPage from '@/pages/Modals/Registers/RegisterGeneralPage.vue'
-import LoginModal from '@/pages/Logins/LoginModal.vue'
-import RegisterCliente from '@/pages/Registers/RegisterCliente.vue'
+import LoginModal from '@/pages/Modals/Logins/LoginModal.vue'
+import RegisterCliente from '@/pages/Modals/Registers/RegisterCliente.vue'
 import AlertConfirm from "@/components/Alerts/AlertConfirm.vue";
 
 function isAuthenticated() {

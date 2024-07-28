@@ -48,8 +48,8 @@
 
 <script>
 import Side_Bar from '@/components/Side_Bar.vue';
-import LoginModal from '@/pages/Logins/LoginModal.vue';
-import RegisterModal from '@/pages/Registers/RegisterCliente.vue'
+import LoginModal from '@/pages/Modals/Logins/LoginModal.vue';
+import RegisterModal from '@/pages/Modals/Registers/RegisterCliente.vue'
 import { getInfoNB, getNamePage } from "@/services/RequestsHttp.js";
 
 export default {

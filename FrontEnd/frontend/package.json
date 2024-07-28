@@ -1,5 +1,5 @@
 {
-  "name": "front-end",
+  "name": "frontend",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -11,14 +11,10 @@
     "axios": "^1.7.2",
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
-    "bootstrap-toggle": "^2.2.2",
-    "core-js": "^3.8.3",
-    "jquery": "^3.7.1",
-    "popper.js": "^1.16.1",
+    "core-js": "^3.37.1",
     "vue": "^3.2.13",
     "vue-router": "^4.4.0",
-    "vuex": "^4.1.0",
-    "webpack": "^5.93.0"
+    "vuex": "^4.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",

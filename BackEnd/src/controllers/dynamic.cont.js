@@ -15,7 +15,9 @@ export const getInfo = async (req, res) => {
         })
     } catch (error) {
         console.log(error);
-        res.status(500).json({error: 'Error al solicitar la peticion'})
+        res.status(500).json({
+            error: 'Error al solicitar la peticion: ' + error
+        })
     }
 }
 
@@ -31,8 +33,9 @@ export const getNamePage = async (req, res) => {
             info: name
         })
     } catch (error) {
-        console.log(error);
-        res.status(500).json({error: 'Error al solicitar la peticion'})
+        res.status(500).json({
+            error: 'Error al solicitar la peticion: ' + error 
+        })
     }
 }
 

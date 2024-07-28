@@ -11,7 +11,7 @@ app.set('port', config.port);
 
 // Cors
 app.use(cors({
-    origin: 'http://localhost:3002',
+    origin: 'http://localhost:3003',
     methods: ['GET, PUT, DELETE, POST'],
     allowedHeaders: ['Content-Type', 'Authorization']
 }));
